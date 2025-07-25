@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Interactivo: Células</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <h1>Video Interactivo: Introducción a las Células</h1>
+
+  <video id="miVideo" width="720" controls>
+    <source src="videos/Presentación de Biología Célula Eucariota vs Procariota Organización y funcionamiento de los seres vivos 3D colorido.mp4" type="video/mp4">
+    Tu navegador no soporta video HTML5.
+  </video>
+
+  <!-- Pregunta emergente -->
+  <div id="pregunta" style="display:none;" class="pregunta-box">
+    <p><strong>¿Cuál es la función del núcleo en la célula?</strong></p>
+    <button onclick="responder(true)">Controlar las funciones de la célula</button>
+    <button onclick="responder(false)">Producir energía</button>
+  </div>
+
+  <!-- Sonido opcional de acierto o error -->
+  <audio id="bien" src="sonidos/correcto.mp3" preload="auto"></audio>
+  <audio id="mal" src="sonidos/incorrecto.mp3" preload="auto"></audio>
+
+  <script src="js/interaccion.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f8f9fa;
+}
+
+#imagen {
+  position: relative;
+  width: 700px;
+  margin: auto;
+}
+
+#imagen img {
+  width: 100%;
+}
+
+.drop-zone {
+  position: absolute;
+  width: 120px;
+  height: 35px;
+  border: 2px dashed #aaa;
+  background-color: #ffffff;
+}
+
+.draggabl {
+  padding: 5px 10px;
+  background-color: #ccffe0;
+  border: 1px solid #ffee00;
+  margin: 10px;
+  display: inline-block;
+  cursor: grab;
+  border-radius: 5px;
+}
+
+#verificarBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#verificarBtn:hover {
+  background-color: #218838;
+}
+
+#resultado {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-contenido {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.cerrar {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+

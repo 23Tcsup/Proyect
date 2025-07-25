@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo celular</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <header>
+        <nav>
+            <h3>Mundo Celular</h3>
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="#que-es">¿Qué es una célula?</a></li>
+                <li><a href="tipos.html">Tipos</a></li>
+                <li><a href="juegos.html">Partes</a></li>
+                <li><a href="test.html">Aplicar lo aprendido</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<section class="juego-tipos">
+      <h2>🧬 Clasifica los Tipos de Organismos</h2><h2> por su Tipo de Célula</h2>
+ 
+      <div class="explicacion-con-imagen" style="margin-top: 2rem;">
+  <!-- Explicación textual -->
+  <div class="explicacion-tipos">
+    <p class="intro">
+      🌱 Todos los seres vivos están formados por células, pero no todas son iguales:
+    </p>
+    <div class="tarjetas-explicacion">
+      <div class="tarjeta tipo-procariota">
+        <h3>🦠 Procariotas</h3>
+        <p>No tienen núcleo definido. Son células simples como las bacterias.</p>
+      </div>
+      <div class="tarjeta tipo-animal">
+        <h3>🐶 Eucariotas Animales</h3>
+        <p>Tienen núcleo y estructuras internas. Ej: Humanos, gatos, ranas.</p>
+      </div>
+      <div class="tarjeta tipo-vegetal">
+        <h3>🌿 Eucariotas Vegetales</h3>
+        <p>Tienen núcleo, pared celular y cloroplastos. Ej: Plantas y algas verdes.</p>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Imagen decorativa -->
+  <div class="imagen-tipos">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Eukaryota_diversity_2.jpg/640px-Eukaryota_diversity_2.jpg" alt="Tipos de células" />
+
+  </div>
+</div>
+<p class="instruccion">
+      👉 Arrastra cada especie al grupo correcto según su tipo de célula. ¡Tú puedes!
+    </p>
+
+  <!-- JUEGO DE CLASIFICACIÓN -->
+  <div class="contenedor-juego">
+    <div class="elementos">
+      <div class="draggable" draggable="true" id="escherichia-coli">🦠 Escherichia coli</div>
+      <div class="draggable" draggable="true" id="homo-sapiens">🧍‍♂️ Homo sapiens</div>
+      <div class="draggable" draggable="true" id="pinus">🌲 Pinus (Pino)</div>
+      <div class="draggable" draggable="true" id="lactobacillus">🦠 Lactobacillus</div>
+      <div class="draggable" draggable="true" id="felis-catus">🐱 Felis catus (Gato)</div>
+      <div class="draggable" draggable="true" id="zea-mays">🌽 Zea mays (Maíz)</div>
+      <div class="draggable" draggable="true" id="streptococcus">🦠 Streptococcus</div>
+      <div class="draggable" draggable="true" id="rana-pipiens">🐸 Rana pipiens</div>
+      <div class="draggable" draggable="true" id="chlamydomonas">🧪 Chlamydomonas</div>
+    </div>
+
+    <div class="dropzones">
+      <div class="zona zona-procariota">
+        <p class="titulo-drop">PROCARIOTA</p>
+        <div class="dropzone" data-correcto="procariota"></div>
+      </div>
+      <div class="zona zona-animal">
+        <p class="titulo-drop">EUCARIOTA ANIMAL</p>
+        <div class="dropzone" data-correcto="eucariota-animal"></div>
+      </div>
+      <div class="zona zona-vegetal">
+        <p class="titulo-drop">EUCARIOTA VEGETAL</p>
+        <div class="dropzone" data-correcto="eucariota-vegetal"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="botones-juego">
+    <button onclick="verificarTipos()">✅ Verificar</button>
+    <button onclick="restaurarTipos()">🔄 Restaurar</button>
+  </div>
+
+  <p id="resultado-tipos"></p>
+</section>
+
+
+
+    <script src="js/tipos.js"></script>
+</body>
+
+</html>

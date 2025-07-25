@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Célula Procariota - Interactiva</title>
+  <link rel="stylesheet" href="css/celula.css">
+</head>
+<body>
+
+  <h1>Arrastra y coloca los nombres en la célula procariota</h1>
+
+  <div id="opciones">
+    <div class="draggable" draggable="true" id="capsula">Cápsula</div>
+    <div class="draggable" draggable="true" id="pared">Pared celular</div>
+    <div class="draggable" draggable="true" id="membrana">Membrana plasmática</div>
+    <div class="draggable" draggable="true" id="plasmido">Plasmido</div>
+    <div class="draggable" draggable="true" id="citoplasma">Citoplasma</div>
+    <div class="draggable" draggable="true" id="adn">ADN</div>
+    <div class="draggable" draggable="true" id="ribosomas">Ribosomas</div>
+    <div class="draggable" draggable="true" id="fimbrias">Inclusiones</div>
+    <div class="draggable" draggable="true" id="flagelo">Pili</div>
+  </div>
+
+  <div id="imagen">
+    <img src="img/Procariota-removebg-preview.png" alt="Célula Procariota">
+
+    <!-- Posiciones exactas según la imagen -->
+    <div class="drop-zone" id="zona1" style="top: 112px; left: 545px;"></div>  <!-- Cápsula -->
+    <div class="drop-zone" id="zona2" style="top: 85px; left: 250px;"></div>   <!-- Pared celular -->
+    <div class="drop-zone" id="zona3" style="top: 230px; left: 50px;"></div>   <!-- Plasmido -->
+    <div class="drop-zone" id="zona4" style="top: 352px; left: 430px;"></div>  <!-- Citoplasma -->
+    <div class="drop-zone" id="zona5" style="top: 305px; left: 450px; width: 220px;"></div> <!-- ADN -->
+    <div class="drop-zone" id="zona6" style="top: 310px; left: 20px;"></div>   <!-- Ribosomas -->
+    <div class="drop-zone" id="zona7" style="top: 462px; left: 392px;"></div>  <!-- Inclusiones -->
+    <div class="drop-zone" id="zona8" style="top: 493px; left: 40px;"></div>   <!-- Pili -->
+    <div class="drop-zone" id="zona9" style="top: 169px; left: 167px;"></div>  <!-- Membrana plasmática -->
+  </div>
+
+  <button id="verificarBtn">Verificar respuestas</button>
+  <div id="resultado"></div>
+
+  <script src="js/celula.js"></script>
+</body>
+</html>

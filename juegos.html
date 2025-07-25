@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Zona de Juegos - Mundo Celular</title>
+  <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/celula.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+   <nav>
+      <h3>Mundo Celular</h3>
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="#que-es">¿Qué es una célula?</a></li>
+        <li><a href="tipos.html">Tipos</a></li>
+        <li><a href="juegos.html">Partes</a></li>
+        <li ><a style="color:rgb(255, 230, 0)" href="temas.html">Aplicar lo aprendido</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ <section id="introduccion-partes" style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 280px;">
+    <h2>🔍 Conoce las partes de la célula</h2>
+    <p>Las células son las unidades básicas de la vida. Están formadas por distintas partes, llamadas orgánulos o estructuras celulares, que trabajan en conjunto para que la célula funcione correctamente.</p>
+    <p>En esta sección aprenderás de forma sencilla y divertida cuáles son las partes más importantes de una célula y qué funciones cumplen. Mira con atención el video y prepárate para aplicar lo aprendido en los juegos interactivos. ¡Vamos a explorar el mundo celular!</p>
+  </div>
+
+  <div style="flex: 1; min-width: 280px; text-align: center;">
+    <img src="https://s1.significados.com/foto/celula-vegetal-partes-significados.jpg?class=article" alt="Estructura de la célula" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+  </div>
+</section>
+
+
+
+  <section id="video-educativo">
+  <h2>🎥 Video Educativo: Las celulas</h2>
+  <div style="display: flex; justify-content: center;">
+    <iframe width="700" height="415" 
+      src="videos/principal.mp4" 
+      title="Video educativo sobre Células" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+</section>
+
+  <section class="juego">
+     <h1> 🧩 Arrastra y coloca los nombres en la Célula Procariota</h1>
+     <p>Coloca cada parte en su lugar correspondiente.</p>
+  <div id="opciones" style="margin-top: 2rem;">
+    <div class="draggabl" draggable="true" id="capsula">Cápsula</div>
+    <div class="draggabl" draggable="true" id="pared">Pared celular</div>
+    <div class="draggabl" draggable="true" id="membran">Membrana plasmática</div>
+    <div class="draggabl" draggable="true" id="plasmido">Plasmido</div>
+    <div class="draggabl" draggable="true" id="citoplasma">Citoplasma</div>
+    <div class="draggabl" draggable="true" id="adn">ADN</div>
+    <div class="draggabl" draggable="true" id="ribosomas">Ribosomas</div>
+    <div class="draggabl" draggable="true" id="inclusiones">Inclusiones</div>
+    <div class="draggabl" draggable="true" id="pili">Pili</div>
+  </div>
+
+ 
+ 
+
+  <div id="imagen">
+    <img src="img/Procariota-removebg-preview.png" alt="Célula Procariota">
+
+    <!-- Posiciones exactas según la imagen -->
+    <div class="drop-zone" id="zona1" style="top: 112px; left: 545px;"></div>  <!-- Cápsula -->
+    <div class="drop-zone" id="zona2" style="top: 85px; left: 250px;"></div>   <!-- Pared celular -->
+    <div class="drop-zone" id="zona3" style="top: 230px; left: 50px;"></div>   <!-- Plasmido -->
+    <div class="drop-zone" id="zona4" style="top: 352px; left: 430px;"></div>  <!-- Citoplasma -->
+    <div class="drop-zone" id="zona5" style="top: 305px; left: 450px; width: 220px;"></div> <!-- ADN -->
+    <div class="drop-zone" id="zona6" style="top: 310px; left: 20px;"></div>   <!-- Ribosomas -->
+    <div class="drop-zone" id="zona7" style="top: 462px; left: 392px;"></div>  <!-- Inclusiones -->
+    <div class="drop-zone" id="zona8" style="top: 493px; left: 40px;"></div>   <!-- Pili -->
+    <div class="drop-zone" id="zona9" style="top: 169px; left: 167px;"></div>  <!-- Membrana plasmática -->
+  </div>
+
+  <button id="verificarBtn">Verificar respuestas</button>
+<div id="resultado"></div>
+ </section>
+<!-- Modal emergente -->
+<div id="modalResultado" class="modal">
+  <div class="modal-contenido">
+    <span id="cerrarModals" class="cerrar">&times;</span>
+    <h2 id="tituloModal"></h2>
+    <img id="imagenModal" src="" alt="Resultado" style="max-width: 200px; margin: 10px 0;">
+    <button id="reintentarBtn" style="display: none;">🔁 Volver a intentarlo</button>
+  </div>
+</div>
+
+  
+
+  <main>
+    <section class="juego">
+      <h1>🧩 Arrastra y suelta las partes de la célula</h1>
+      <p>Coloca cada parte en su lugar correspondiente para demostrar tu conocimiento celular.</p>
+      <div class="contenedor-juego">
+        <div class="elementos">
+          <div class="draggable" draggable="true" id="nucleo">
+            <img src="img/nucleo.png" alt="Núcleo">
+            
+          </div>
+          <div class="draggable" draggable="true" id="mitocondria">
+            <img src="img/mitocondria.png" alt="Mitocondria">
+            
+          </div>
+          <div class="draggable" draggable="true" id="membrana">
+            <img src="img/membran.png" alt="Membrana">
+          
+          </div>
+        </div>
+
+        <div class="dropzones">
+          <div class="dropzone" data-correcto="membrana">¿Membrana?</div>
+          <div class="dropzone" data-correcto="nucleo">¿Núcleo?</div>
+          <div class="dropzone" data-correcto="mitocondria">¿Mitocondria?</div>
+        </div>
+      </div>
+
+      <button onclick="verificar()">✅ Verificar </button>
+      <button onclick="restaurar()">🔄 Restaurar</button>
+
+      <p id="resultados"></p>
+
+      <!-- Sonidos -->
+      <audio id="audio-correcto" src="sonidos/correcto.mp3" preload="auto"></audio>
+      <audio id="audio-incorrecto" src="sonidos/incorrecto.mp3" preload="auto"></audio>
+    </section>
+
+    <section class="juego-extra">
+  <h2>🔬 ¿Qué parte hace qué?</h2>
+  <p>Selecciona una célula y haz clic en sus partes para descubrir su función.</p>
+
+  <div class="selector-celulas">
+    <button class="but"  onclick="mostrarSeccion('procariota')">🦠 Procariota</button>
+    <button class="but"  onclick="mostrarSeccion('animal')">🐾 Animal</button>
+    <button class="but"  onclick="mostrarSeccion('vegetal')">🌿 Vegetal</button>
+  </div>
+
+  <!-- Sección Procariota -->
+  <div class="partes-celula" id="procariota" style="display:none;">
+    <h3>Célula Procariota</h3>
+    <button onclick="mostrarFuncion('capsula')">🧴 Cápsula</button>
+    <button onclick="mostrarFuncion('pared')">🧱 Pared celular</button>
+    <button onclick="mostrarFuncion('membrana')">🛡️ Membrana plasmática</button>
+    <button onclick="mostrarFuncion('citoplasma')">💧 Citoplasma</button>
+    <button onclick="mostrarFuncion('adn')">🧬 ADN</button>
+    <button onclick="mostrarFuncion('plasmido')">🔄 Plásmido</button>
+    <button onclick="mostrarFuncion('ribosomas')">🏗️ Ribosomas</button>
+    <button onclick="mostrarFuncion('pili')">🧷 Pili</button>
+  </div>
+
+  <!-- Sección Animal -->
+  <div class="partes-celula" id="animal" style="display:none;">
+    <h3>Célula Animal</h3>
+    <button onclick="mostrarFuncion('nucleo')">🧠 Núcleo</button>
+    <button onclick="mostrarFuncion('mitocondria')">⚡ Mitocondria</button>
+    <button onclick="mostrarFuncion('membrana')">🛡️ Membrana plasmática</button>
+    <button onclick="mostrarFuncion('lisosoma')">🧪 Lisosomas</button>
+    <button onclick="mostrarFuncion('centriolos')">🎯 Centríolos</button>
+  </div>
+
+  <!-- Sección Vegetal -->
+  <div class="partes-celula" id="vegetal" style="display:none;">
+    <h3>Célula Vegetal</h3>
+    <button onclick="mostrarFuncion('pared')">🧱 Pared celular</button>
+    <button onclick="mostrarFuncion('cloroplasto')">🌞 Cloroplasto</button>
+    <button onclick="mostrarFuncion('vacuola')">💧 Vacuola central</button>
+    <button onclick="mostrarFuncion('nucleo')">🧠 Núcleo</button>
+    <button onclick="mostrarFuncion('membrana')">🛡️ Membrana plasmática</button>
+  </div>
+
+  <div id="funcion" class="funcion-descripcion"></div>
+</section>
+
+  </main>
+
+  <footer>
+    <p>Zona de Juegos - Mundo Celular | Concurso Eureka 2025</p>
+  </footer>
+
+<script src="js/celula.js"></script>
+<script src="js/juegos.js"></script>
+  
+</body>
+</html>
