@@ -44,7 +44,7 @@ document.getElementById("entregar").addEventListener("click", function () {
       confirmButtonColor: "#28a745",
     }).then((result) => {
       if (result.isConfirmed) {
-        window.location.href = "inicio.html"; // Cambia a la página que desees
+        window.location.href = "index.html"; // Cambia a la página que desees
       }
     });
   } else {
